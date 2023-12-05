@@ -27,6 +27,14 @@ model Account {
   @@unique([provider, providerAccountId])
 }
 
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
 model VerificationRequest {
   id         String   @id @default(cuid())
   identifier String

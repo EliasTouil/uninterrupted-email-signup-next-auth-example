@@ -1,6 +1,6 @@
 import "next-auth";
 
-// This is how we augment the session
+// This is how we extend the session object
 declare module "next-auth" {
 	interface User {
 		id?: string;

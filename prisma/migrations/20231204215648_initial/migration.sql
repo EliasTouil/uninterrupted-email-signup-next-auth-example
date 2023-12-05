@@ -18,6 +18,13 @@ CREATE TABLE "Account" (
 );
 
 -- CreateTable
+CREATE TABLE "VerificationToken" (
+    "identifier" TEXT NOT NULL,
+    "token" TEXT NOT NULL,
+    "expires" TIMESTAMP(3) NOT NULL
+);
+
+-- CreateTable
 CREATE TABLE "VerificationRequest" (
     "id" TEXT NOT NULL,
     "identifier" TEXT NOT NULL,
@@ -66,6 +73,12 @@ CREATE TABLE "Post" (
 
 -- CreateIndex
 CREATE UNIQUE INDEX "Account_provider_providerAccountId_key" ON "Account"("provider", "providerAccountId");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "VerificationToken_token_key" ON "VerificationToken"("token");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "VerificationToken_identifier_token_key" ON "VerificationToken"("identifier", "token");
 
 -- CreateIndex
 CREATE UNIQUE INDEX "VerificationRequest_token_key" ON "VerificationRequest"("token");
