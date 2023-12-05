@@ -37,6 +37,10 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Other notes
+
+If you want to use this I suggest you cmd+f all the //TODO comments and go through them one by one.
+
 ## Warnings
 
 This was created to be used with insensitive data, please use with caution and keep your user's interest in mind when manipulating their identity.
