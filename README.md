@@ -1,9 +1,10 @@
-This is an example project to demonstrate a specific use case of next-auth.
+This is an example project to demonstrate a specific passwordless use case of next-auth with CredentialProvider.
+
 We will use postgres as a database and Prisma as an ORM. Hopefully you can reproduce this example with your own stack.
 
 ## The use case
 
-Some user flows require signing up. Signing up with a magic link can cause dramatic churn or bounce as user don't want to got to their email client to complete the flow. next-auth does not have support for 'anonymous user' (concept borrowed from GCP/Firebase auth) that allows use to tie actions and entities to a user before it's signed up. It may be appropriate for you to sign in a user by smply requiring their email and not interrupt their flow.
+Some user flows require creating a user and keeping track of a session even if the user did not properly sign up. Signing up with a magic link can cause dramatic churn or bounce as user don't want to got to their email client to complete a specific flow. next-auth does not have support for 'anonymous user' (concept borrowed from GCP/Firebase auth) that allows use to tie actions and entities to a user before it's signed up. It may be appropriate for you to sign in a user by smply requiring their email and not interrupt their flow.
 
 ### Flow we want to create
 
