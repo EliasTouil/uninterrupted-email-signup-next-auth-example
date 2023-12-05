@@ -8,11 +8,12 @@ Some user flows require creating a user and keeping track of a session even if t
 
 ### Flow we want to create
 
-Mimic an onboarding flow.
-User unauthenticated user creates a Post entity.
-User submits their e-mail to signup.
-User is signed in as soon as they submit their e-mail.
+This is a community chat, we want users to be able to post as fast as possible when they get onto the platform.
+
+The user lands on an onboarding flow
+The user provides an email and can keep going as a authenticated user
 In the background, an email is sent with a verification link. (see console)
+User can submit a post
 User can go to a protected page, and see their linked Post entity.
 User sees a message telling them they're not verified, and need to verify to **_sensitive actions_**
 
@@ -35,3 +36,7 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Warnings
+
+This was created to be used with insensitive data, please use with caution and keep your user's interest in mind when manipulating their identity.
