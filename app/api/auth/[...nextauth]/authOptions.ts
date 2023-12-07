@@ -65,6 +65,9 @@ const authOptions: NextAuthOptions = {
 					data: { email: credentials.email },
 				});
 
+				//TODO the "createUser" event is not fired when using credentials provider
+				// If you had some custom logic in it, here is a good place to call it
+
 				return user;
 			},
 		}),
