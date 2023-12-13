@@ -31,7 +31,6 @@ const MockUserFlowSignupPage = () => {
 				setNeedsMagicLink(true);
 			}
 			// You can provide a redirectUrl as second parameter
-			//N.B. th
 			sendAsyncVerificationEmail(email);
 			router.push("/mock-user-flow/post");
 		});
